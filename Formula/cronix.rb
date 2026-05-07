@@ -5,13 +5,13 @@
 class Cronix < Formula
   desc "Cron jobs as code — reconcile app-declared schedules against the host scheduler"
   homepage "https://github.com/awbx/cronix"
-  version "0.7.4"
+  version "0.9.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/awbx/cronix/releases/download/v0.7.4/cronix_0.7.4_darwin_amd64.tar.gz"
-      sha256 "9afa1c23487a439623843243f29f5c1a45613784c16fe62060088f4a61ba3a15"
+      url "https://github.com/awbx/cronix/releases/download/v0.9.1/cronix_0.9.1_darwin_amd64.tar.gz"
+      sha256 "aada3631506f877e5b33abb6496746883218deb3c9509c577ee37868f9789b6c"
 
       define_method(:install) do
         bin.install "cronix"
@@ -19,8 +19,8 @@ class Cronix < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/awbx/cronix/releases/download/v0.7.4/cronix_0.7.4_darwin_arm64.tar.gz"
-      sha256 "d45b508b3f29f69c4c2b695193ee3464a5a2972dc8a3de3df9c62e4467e3a768"
+      url "https://github.com/awbx/cronix/releases/download/v0.9.1/cronix_0.9.1_darwin_arm64.tar.gz"
+      sha256 "c307ce1da5983aa418cd8b7b4d37425031774c6084405b2779614bf866515d6b"
 
       define_method(:install) do
         bin.install "cronix"
@@ -31,16 +31,16 @@ class Cronix < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/awbx/cronix/releases/download/v0.7.4/cronix_0.7.4_linux_amd64.tar.gz"
-      sha256 "74ad195bc03b4691e4e4603010f99c95d5932d04dcb33a93d3a857f6b24ad05b"
+      url "https://github.com/awbx/cronix/releases/download/v0.9.1/cronix_0.9.1_linux_amd64.tar.gz"
+      sha256 "9e19d164ffe6b3dff1adfc91e6cb284b4cb5464a1ee8ddb40c41da6dd34e37a4"
       define_method(:install) do
         bin.install "cronix"
         generate_completions_from_executable(bin/"cronix", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/awbx/cronix/releases/download/v0.7.4/cronix_0.7.4_linux_arm64.tar.gz"
-      sha256 "d4e4259921966813a201b26a5883bb19b65710736638f2ed203f069c1ed50603"
+      url "https://github.com/awbx/cronix/releases/download/v0.9.1/cronix_0.9.1_linux_arm64.tar.gz"
+      sha256 "4944871da2b05a2adf85a8db772fa077a2a8af67b7e845c7fb11613740f97f4d"
       define_method(:install) do
         bin.install "cronix"
         generate_completions_from_executable(bin/"cronix", "completion")
